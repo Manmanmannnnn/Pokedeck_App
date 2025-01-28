@@ -1,6 +1,8 @@
+import "./Category.css";
+
 function Category({ handlePokemonType }) {
   return (
-    <div>
+    <div className='categoryArea'>
       <button value='type/3' onClick={(e) => handlePokemonType(e)}>
         Flying
       </button>

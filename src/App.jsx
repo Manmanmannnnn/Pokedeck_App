@@ -4,6 +4,7 @@ import { getTypePokemon, searchPokemon } from "./Components/Fetch";
 import { useEffect, useState } from "react";
 import Container from "./Components/Container";
 import Category from "./Components/Category";
+import "./index.css";
 
 function App() {
   const [pokeList, setPokeList] = useState({});
@@ -87,7 +88,7 @@ function App() {
   const result = display(pokeList);
 
   return (
-    <div>
+    <div className='container'>
       <Nav
         handleInputChange={handleInputChange}
         name={name}

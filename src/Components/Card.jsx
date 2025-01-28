@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import "./Card.css";
 
 function Card({ name, sprite }) {
   return (
-    <div style={{ textAlign: "center", backgroundColor: "green" }}>
+    <div className='cardDiv'>
       <p>{name}</p>
       <img src={sprite} alt='' />
     </div>

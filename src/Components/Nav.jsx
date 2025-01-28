@@ -1,16 +1,18 @@
-import React from "react";
+import { FaSearch } from "react-icons/fa";
+import "./Nav.css";
 
 function Nav({ handleInputChange, name, handleFinalName }) {
   return (
-    <div>
-      <span>Search</span>
+    <div className='navArea'>
       <input
         type='text'
         value={name}
         placeholder='Enter Name here...'
         onChange={handleInputChange}
       />
-      <button onClick={() => handleFinalName()}>Find</button>
+      <button className='findBtn' onClick={() => handleFinalName()}>
+        <FaSearch size={30} />
+      </button>
     </div>
   );
 }
