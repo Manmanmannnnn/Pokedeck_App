@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./index.css";
 
 function App() {
-  const [type, setType] = useState("type/3");
+  const [type, setType] = useState("https://pokeapi.co/api/v2/type/1/");
   const [name, setName] = useState("");
   const [finalName, setFinalName] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -52,7 +52,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="h-screen overflow-hidden">
       <Nav
         handleInputChange={handleInputChange}
         name={name}

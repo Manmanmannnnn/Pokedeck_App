@@ -11,31 +11,32 @@ function Container({ result, handlePokemonClick, selectedPokemon }) {
   }
 
   return (
-    <div className="flex h-screen flex-col">
-      <div className="h-1/2">
+    <div className="flex h-full cursor-default flex-col">
+      <div className="m-4">
         {selectedPokemon && (
-          <div className="m-auto flex w-1/2 flex-col items-center justify-center rounded-2xl border-2 border-solid border-cyan-100">
-            <h2 className="text-2xl font-semibold text-gray-200">
-              {selectedPokemon.props.name}
-            </h2>
+          <div className="SlideEffect m-auto flex w-1/4 items-center justify-center border-b-2">
             <img
-              className="duration-75 hover:scale-110"
+              className="flex-1"
               src={selectedPokemon.props.sprite}
               alt={selectedPokemon.props.name}
             />
-
-            <p className="text-xl font-medium text-gray-200">
-              Type:{" "}
-              {selectedPokemon.props.pokemonTypes
-                .map((el) => el.type.name)
-                .join(",")}
-            </p>
-            <p className="text-xl font-medium text-gray-200">
-              Abilities:{" "}
-              {selectedPokemon.props.pokemonAbilities
-                .map((el) => el.ability.name)
-                .join(",")}
-            </p>
+            <div className="flex-1">
+              <h2 className="pb-3 text-2xl font-semibold text-gray-200">
+                {selectedPokemon.props.name}
+              </h2>
+              <p className="pb-1 text-sm font-medium text-gray-200">
+                Type:{" "}
+                {selectedPokemon.props.pokemonTypes
+                  .map((el) => el.type.name)
+                  .join(",")}
+              </p>
+              <p className="pb-1 text-sm font-medium text-gray-200">
+                Abilities:{" "}
+                {selectedPokemon.props.pokemonAbilities
+                  .map((el) => el.ability.name)
+                  .join(",")}
+              </p>
+            </div>
           </div>
         )}
       </div>

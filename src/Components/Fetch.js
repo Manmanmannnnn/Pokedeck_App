@@ -2,7 +2,7 @@ import axios from "axios";
 const base_url = "https://pokeapi.co/api/v2/";
 
 export async function getTypePokemon(type) {
-  const response = await axios.get(`${base_url}${type}`);
+  const response = await axios.get(type);
   return response.data;
 }
 

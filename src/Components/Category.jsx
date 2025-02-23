@@ -1,24 +1,37 @@
 function Category({ handlePokemonType }) {
+  const typeList = [
+    { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
+    { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
+    { name: "flying", url: "https://pokeapi.co/api/v2/type/3/" },
+    { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
+    { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
+    { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
+    { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
+    { name: "ghost", url: "https://pokeapi.co/api/v2/type/8/" },
+    { name: "steel", url: "https://pokeapi.co/api/v2/type/9/" },
+    { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
+    { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
+    { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
+    { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
+    { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
+    { name: "ice", url: "https://pokeapi.co/api/v2/type/15/" },
+    { name: "dragon", url: "https://pokeapi.co/api/v2/type/16/" },
+    { name: "dark", url: "https://pokeapi.co/api/v2/type/17/" },
+    { name: "fairy", url: "https://pokeapi.co/api/v2/type/18/" },
+  ];
+
   return (
-    <div className="flex justify-center gap-2 p-3">
-      <button value="type/3" onClick={(e) => handlePokemonType(e)}>
-        Flying
-      </button>
-      <button value="type/13" onClick={(e) => handlePokemonType(e)}>
-        Electric
-      </button>
-      <button value="type/15" onClick={(e) => handlePokemonType(e)}>
-        Ice
-      </button>
-      <button value="type/10" onClick={(e) => handlePokemonType(e)}>
-        Fire
-      </button>
-      <button value="type/6" onClick={(e) => handlePokemonType(e)}>
-        Rock
-      </button>
-      <button value="type/11" onClick={(e) => handlePokemonType(e)}>
-        Water
-      </button>
+    <div className="m-auto flex w-1/2 flex-wrap justify-center gap-2 p-3">
+      {typeList.map((type) => (
+        <button
+          className="rounded-xl px-3 py-1 text-lg font-medium text-gray-200 duration-500 hover:bg-slate-200 hover:text-gray-800"
+          key={type.name}
+          value={type.url}
+          onClick={(e) => handlePokemonType(e)}
+        >
+          {type.name}
+        </button>
+      ))}
     </div>
   );
 }
