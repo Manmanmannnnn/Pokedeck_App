@@ -2,6 +2,10 @@
 
 Welcome to the my Pokedeck website! This website allows you to explore a collection of Pokémon and view their information.
 
+## Demo 👀
+
+- [Poke-Deck](https://zingy-flan-72d304.netlify.app/)
+
 ## How to Use 🔍
 
 - **Browse by Type**: Select a Pokémon type from the list to view all Pokémon of that type.
